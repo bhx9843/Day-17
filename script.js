@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Replace 'YOUR_REST_COUNTRIES_API_URL' with the actual endpoint of the Rest Countries API
     fetch('https://restcountries.com/v3.1/all')
         .then(response => response.json())
         .then(data => {
@@ -42,8 +41,7 @@ function createCountryCard(country) {
 }
 
 function fetchWeatherData(countryCode) {
-    // Replace 'YOUR_OPENWEATHERMAP_API_KEY' with your actual API key from OpenWeatherMap
-    const apiKey = 'https://api.example.com/data1';
+    const apiKey = 'https://api.openweathermap.org';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?country=${countryCode}&appid=${apiKey}`;
 
     fetch(apiUrl)
